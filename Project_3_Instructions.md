@@ -31,11 +31,32 @@ Once downloaded double click the executable to launch the installer, the default
 The guest operating system is Ubuntu Server LTS, or long-term support. Versions designed with long support in mind are easier to develop for as programming interfaces are changed much less over time that regular versions. The virtual machine will need a disk image to boot from, [Ubuntu Server downloads](https://ubuntu.com/download/server), get the 24.04.1 LTS version.
 
 ## Create Virtual Machine in VirtualBox
-add install steps and pictures for virtualbox setup
+Click on the blue New button to create a new virtual machine.
+![Initial VirtualBox screen](screenshots/01-virtualbox%20start.png)  
+  
+Set the name field to the preferred hostname, this example used "DevEnv", the the operating system type to Linux, subtype to Ubuntu, and the Version to Ubuntu (64-bit). Use the ISO Image field chooser to select the disk image downloaded earlier.
+![Set name and operating system](screenshots/02-vm%20name%20and%20os.png)  
+
+Set the number of CPU and amount of memory, this case is 4 CPU and 8192 megabytes of memory. 
+![Set number of CPU and memory](screenshots/03-vm%20hardware.png)  
+
+Finally set the location of the virtual disk and size which can be left at the defaults for a 25 gigabyte disk. Check the Pre-allocate Full Size checkbox to speed up disk operations.
+![Set disk partition](screenshots/04-vm%20disk.png)
 
 ## Initial Virtual Machine Boot
-add picture of initial boot
-do ahcpi shutdown
+You will be presented with a boot screen after the virtual machine is created. Choose all the defaults during install. When presented with the choice for machine name this documents chose "DevEnv". Set a username and password, when presented with the choice, and remember the choices.
+Choose Machine/ACPI Shutdown to shut the virtual machine down in order to do more virtual machine configuration.
+![The initial boot screen.](screenshots/05-initial_boot.png)
+
+## Configure Video RAM
+From the main VirtualBox screen, make sure the DevEnv is selected and click the orange settings button. 128 megabytes of video RAM ensures the Linux virtual machine runs smoothly.
+![The display settings screen.](screenshots/06-detail_settings.png)
+
+## Install Window Maker, Xterm and WDM
+Ubuntu server does not have a graphical user interface (GUI) so we need to install one. 
+```
+sudo apt install wmaker xterm wdm
+```
 
 
 
