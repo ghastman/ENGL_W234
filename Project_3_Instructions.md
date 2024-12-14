@@ -132,7 +132,9 @@ There is a large collection of XTerm themes available on GitHub [XResources-them
 ```
 We will use the Ubuntu theme. Edit the user home dir from 'ghastman' to your username before running the command
 ```
- echo  '#include "/home/ghastman/.local/share/Xresources-themes/iterm-Ubuntu.Xresources"' >> ~/.Xresources
+echo '#include "/home/ghastman/.local/share/Xresources-themes/iterm-Ubuntu.Xresources"' >> ~/.Xresources
+echo 'XTerm*faceName: Liberation Mono' >> ~/.Xresources
+echo 'XTerm*faceSize: 10' >> ~/.Xresources
 ```
 Reload the Xresources, or restart. The next XTerm opened should reflect the theme change.
 ```
@@ -159,10 +161,12 @@ We can install some small tileable backgrounds from a package that appeared in t
 sudo apt install  propaganda-debian
 cp /usr/share/wallpapers/* ~/GNUstep/Library/WindowMaker/Backgrounds/.
 ```
-Once installed the background and window theme can be changed from the right click menu.
+Once installed the background and window theme can be changed from the right click menu. This is the DarkBlue Style and Sleep-Deprivation-5.JPG tiled background.
 ![Window Maker theme.](screenshots/13-style_background.png)
 
-
+## Finished!
+Now we have a base virtual machine development environement with VS Code, Chrome and MySQL Workbench. Since the machine is a complete linux server, any back end for development can be added. VS Code opens the door to a plethora of tools, with GitHub Copilot as the prime example. 
+![Window Maker final.](screenshots/14-final.png)
 
 
 
