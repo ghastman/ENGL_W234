@@ -16,7 +16,6 @@ Combining these tools makes for a development environment that matches the produ
 | Midnight Commander | file manager | https://midnight-commander.org/ |
 | Vim | text editor| https://www.vim.org/ |
 | MySQL | database | https://www.mysql.com/ |
-| Perl | scripting | https://www.perl.org/ |
 
 ## Install Oracle VirtualBox
 
@@ -150,6 +149,20 @@ wmmon -i &
 wmmon -s &
 ```
 Once the dockapps are started, they can be dragged to the dock and rearranged.
+![Window Maker desktop.](screenshots/11-complete.png)
+
+There are interesting choices for maximizing by right clicking an application title bar. Check Icons and The dock on the Handling page from the Window Maker/Preferences app.
+![Window Maker window handling.](screenshots/12-pref_handling.png)
+
+We can install some small tileable backgrounds from a package that appeared in the late 1990's.
+```
+sudo apt install  propaganda-debian
+cp /usr/share/wallpapers/* ~/GNUstep/Library/WindowMaker/Backgrounds/.
+```
+Once installed the background and window theme can be changed from the right click menu.
+![Window Maker theme.](screenshots/13-style_background.png)
+
+
 
 
 
