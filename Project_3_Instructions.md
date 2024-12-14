@@ -37,6 +37,9 @@ Click on the blue New button to create a new virtual machine.
 From the Name and Operating System section set the name field to the preferred hostname, this example used "devenv", the the operating system type to Linux, subtype to Ubuntu, and the Version to Ubuntu (64-bit). Use the ISO Image field chooser to select the disk image downloaded earlier.
 ![Set name and operating system](screenshots/02-vm%20name%20and%20os.png)  
 
+From the Unattended Install section, set the username and password. The domain name can be changed to fit the local network domain as needed.
+![Set usename, password, and domain](screenshots/02.5-unattended.png)  
+
 From the Hardware section set the number of CPU and amount of memory, in this case 4 CPU and 8192 megabytes of memory. 
 ![Set number of CPU and memory](screenshots/03-vm%20hardware.png)  
 
@@ -46,12 +49,11 @@ Finally from the Hard Disk set the location of the virtual disk. The size can be
 Now all the setting are set so click the Finish button which will provision the disk, and start the operating system from the image.
 
 ## Initial Virtual Machine Boot
-You will be presented with a boot screen after the virtual machine is created. Choose all the defaults during install. When presented with the choice for machine name this documents chose "DevEnv". Set a username and password, when presented with the choice, and remember the choices.
-Choose Machine/ACPI Shutdown to shut the virtual machine down in order to do more virtual machine configuration.
+You will be presented with a boot screen after the virtual machine is created. Choose Machine/ACPI Shutdown to shut the virtual machine down in order to do more virtual machine configuration.
 ![The initial boot screen.](screenshots/05-initial_boot.png)
 
 ## Configure Video RAM
-From the main VirtualBox screen, make sure the DevEnv is selected and click the orange settings button. 128 megabytes of video RAM ensures the Linux virtual machine runs smoothly.
+From the main VirtualBox screen, make sure the devenv is selected and click the orange settings button. On the Display tab, set 128 megabytes of video RAM to ensure the Linux virtual machine runs smoothly. Check the Enable 3D Acceleration checkbox as some later tools can take advantage of the resources provided.
 ![The display settings screen.](screenshots/06-detail_settings.png)
 
 ## Initial Login
