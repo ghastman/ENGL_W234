@@ -110,24 +110,46 @@ Launch Chrome from the right click menu.
 
 
 Navigate to the Visual Studio Code Website and download the deb package.
-https://code.visualstudio.com/
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-Install Code from the downloaded package
+Install Code from the downloaded package, the current version will be different. The second command is all that is needed to paste, then press TAB to complete with the downloaded version.
 ```
-sudo apt install ~/snap/firefox/common/Downloads/code_1.96.3-1731523102_amd64.deb
+sudo apt install ~/Downloads/code_1.96.3-1731523102_amd64.deb
+sudo apt install ~/Downloads/code
 ```
 
 ## Install Oracle MySQL Workbench
 Navigate to the Oracle MySQL website and download the deb package for Workbench.
-[https://code.visualstudio.com/](https://dev.mysql.com/downloads/workbench/)
+[https://dev.mysql.com/downloads/workbench/](https://dev.mysql.com/downloads/workbench/)
 
 Install Workbench from the downloaded package
 ```
-sudo apt install ~/snap/firefox/common/Downloads/mysql-workbench-community_8.0.40-1ubuntu24.04_amd64.deb
+sudo apt install ~/Downloads/mysql-workbench-community_8.0.40-1ubuntu24.04_amd64.deb
 ```
 ## Theme XTerm so it is not garishly ugly
+There is a large collection of XTerm themes available on GitHub [XResources-themes](https://github.com/janoamaral/Xresources-themes)
+```
+ git clone https://github.com/janoamaral/Xresources-themes ~/.local/share/Xresources-themes
+```
+We will use the Ubuntu theme. Edit the user home dir from 'ghastman' to your username before running the command
+```
+ echo  '#include "/home/ghastman/.local/share/Xresources-themes/iterm-Ubuntu.Xresources"' >> ~/.Xresources
+```
+Reload the Xresources, or restart. The next XTerm opened should reflect the theme change.
+```
+xrdb ~/.Xresources
+```
 
 ## Theme Window Maker to make even better
+Window Maker needs dockapps to make the manager more complete, a clock and system monitor to start.
+```
+sudo apt install wmtime wmmon
+wmtime &
+wmmon &
+wmmon -i &
+wmmon -s &
+```
+Once the dockapps are started, they can be dragged to the dock and rearranged.
 
 
 
