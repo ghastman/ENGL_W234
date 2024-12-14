@@ -85,23 +85,30 @@ Double click the terminal icon to start XTerm.
 From the Devices menu, choose Insert Guest Additions CD Image... In the XTerm window mound the disk and install the additions.
 ```
 sudo mount /dev/cdrom /media
-sudo apt install bzip2
+sudo apt install bzip2 gcc make
 sudo /media/VBoxLinuxAdditions.run
 ```
-Once the additions are complete, choose Machine/ACPI Reboot to restart the machine with mouse and clipboard integration.
-^^ clipboard still broken, hmm
+Once the additions are complete, choose Machine/ACPI Shutdown to stop the machine. Start the machine. Before logging in, enable the bidirectional shared clipboard from the devices menu.
 
-## Install the applications we need
+## Install the file manager and test the clipboard
+Midnight Commander is file manager with an orthodox (side by side) layout made popular by Norton Commander. The contents of the shared clipboard can be pasted into XTerm with a middle click.
 ```
 sudo apt install mc
-sudo apt install firefox
+```
+
+## Install Google Chrome as the web browser
+Download the Google repository and install Chrome.
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt --fix-broken install
 ```
 
 ## Install Microsoft Visual Studio Code
-Start firefox from the command prompt.
-```
-firefox &
-```
+Launch Chrome from the right click menu.
+![Window Maker menu.](screenshots/10-chrome_menu.png)
+
+
 Navigate to the Visual Studio Code Website and download the deb package.
 https://code.visualstudio.com/
 
