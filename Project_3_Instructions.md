@@ -53,7 +53,7 @@ You will be presented with a boot screen after the virtual machine is created. C
 ![The initial boot screen.](screenshots/05-initial_boot.png)
 
 ## Configure Video RAM
-From the main VirtualBox screen, make sure the devenv is selected and click the orange settings button. On the Display tab, set 128 megabytes of video RAM to ensure the Linux virtual machine runs smoothly. Check the Enable 3D Acceleration checkbox as some later tools can take advantage of the resources provided.
+From the main VirtualBox screen, make sure the devenv is selected and click the orange settings button. On the Display tab, set 128 megabytes of video RAM to ensure the Linux virtual machine runs smoothly. 
 ![The display settings screen.](screenshots/06-detail_settings.png)
 
 ## Initial Login
@@ -67,7 +67,7 @@ sudo apt upgrade
 ```
 
 ## Install Window Maker, Xterm and WDM
-Ubuntu server does not have a graphical user interface (GUI) so we need to install one. This will install a lot of other packages, so choose yes "Y" when asked. 
+Ubuntu server does not have a graphical user interface (GUI) so we need to install one. This will install a lot of other dependant packages, so choose yes "Y" when asked. When complete the Window Maker window manager, a NeXTSTEP clone that originated on the Amiga, will provide the GUI. The basic console is XTerm, along with several other tools that X Windows provides.
 ```
 sudo apt install wmaker xterm wdm
 ```
