@@ -31,13 +31,13 @@ Once downloaded double click the executable to launch the installer, the default
 The guest operating system is Ubuntu Server LTS, or long-term support. Versions designed with long support in mind are easier to develop for as programming interfaces are changed much less over time that regular versions. The virtual machine will need a disk image to boot from, [Ubuntu Server downloads](https://ubuntu.com/download/server), get the 24.04.1 LTS version.
 
 ## Create Virtual Machine in VirtualBox
-Click on the blue New button to create a new virtual machine.
+Click on the blue New button to create a new virtual machine.  
 ![Initial VirtualBox screen](screenshots/01-virtualbox%20start.png)  
   
-From the Name and Operating System section set the name field to the preferred hostname, this example used "devenv", the the operating system type to Linux, subtype to Ubuntu, and the Version to Ubuntu (64-bit). Use the ISO Image field chooser to select the disk image downloaded earlier.
+From the Name and Operating System section set the name field to the preferred hostname, this example used "devenv", the the operating system type to Linux, subtype to Ubuntu, and the Version to Ubuntu (64-bit). Use the ISO Image field chooser to select the disk image downloaded earlier.  
 ![Set name and operating system](screenshots/02-vm%20name%20and%20os.png)  
 
-From the Unattended Install section, set the username and password. The domain name can be changed to fit the local network domain as needed.
+From the Unattended Install section, set the username and password. The domain name can be changed to fit the local network domain as needed.  
 ![Set usename, password, and domain](screenshots/02.5-unattended.png)  
 
 From the Hardware section set the number of CPU and amount of memory, in this case 4 CPU and 8192 megabytes of memory. 
@@ -129,7 +129,7 @@ sudo apt install ~/Downloads/mysql-workbench-community_8.0.40-1ubuntu24.04_amd64
 ## Theme XTerm so it is not garishly ugly
 There is a large collection of XTerm themes available on GitHub [XResources-themes](https://github.com/janoamaral/Xresources-themes)
 ```
- git clone https://github.com/janoamaral/Xresources-themes ~/.local/share/Xresources-themes
+git clone https://github.com/janoamaral/Xresources-themes ~/.local/share/Xresources-themes
 ```
 We will use the Ubuntu theme. Edit the user home dir from 'ghastman' to your username before running the command
 ```
@@ -151,18 +151,18 @@ wmmon &
 wmmon -i &
 wmmon -s &
 ```
-Once the dockapps are started, they can be dragged to the dock and rearranged.
+Once the dockapps are started, they can be dragged to the dock and rearranged.  
 ![Window Maker desktop.](screenshots/11-complete.png)
 
-There are interesting choices for maximizing by right clicking an application title bar. Check Icons and The dock on the Handling page from the Window Maker/Preferences app.
+There are interesting choices for maximizing by right clicking an application title bar. Check Icons and The dock on the Handling page from the Window Maker/Preferences app.  
 ![Window Maker window handling.](screenshots/12-pref_handling.png)
 
-We can install some small tileable backgrounds from a package that appeared in the late 1990's.
+We can install some small tileable backgrounds from a package that appeared in the late 1990's.  
 ```
 sudo apt install  propaganda-debian
 cp /usr/share/wallpapers/* ~/GNUstep/Library/WindowMaker/Backgrounds/.
 ```
-Once installed the background and window theme can be changed from the right click menu. This is the DarkBlue Style and Sleep-Deprivation-5.JPG tiled background.
+Once installed the background and window theme can be changed from the right click menu. This is the DarkBlue Style and Sleep-Deprivation-5.JPG tiled background.  
 ![Window Maker theme.](screenshots/13-style_background.png)
 
 ## Finished!
@@ -170,7 +170,7 @@ Now we have a base virtual machine development environement with VS Code, Chrome
 ![Window Maker final.](screenshots/14-final.png)
 
 ## Test the Perl calculator
-Fire up an XTerm to test the calculator. We can use the following command to test. In this example "perl -e" tells the Perl intepreter to execute the following input, as opposed to a file of input. Double quotes (") encapsulate the script sent to the intepreter, while the escaped double quotes (\") allow the newline character (\n) to show in the output. EXPR can be any math function.
+Fire up an XTerm to test the calculator. We can use the following command to test. In this example "perl -e" tells the Perl intepreter to execute the following input, as opposed to a file of input. Double quotes (") encapsulate the script sent to the intepreter, while the escaped double quotes (\") allow the newline character (\n) to show in the output. EXPR can be any math function.  
 ```
 perl -e "print EXPR . \"\n\";"
 ```
