@@ -16,6 +16,7 @@ Combining these tools makes for a development environment that matches the produ
 | Midnight Commander | file manager | https://midnight-commander.org/ |
 | Vim | text editor| https://www.vim.org/ |
 | MySQL | database | https://www.mysql.com/ |
+| Perl | scripting | https://www.perl.org/ |
 
 ## Install Oracle VirtualBox
 
@@ -168,9 +169,18 @@ Once installed the background and window theme can be changed from the right cli
 Now we have a base virtual machine development environement with VS Code, Chrome and MySQL Workbench. Since the machine is a complete linux server, any back end for development can be added. VS Code opens the door to a plethora of tools, with GitHub Copilot as the prime example. 
 ![Window Maker final.](screenshots/14-final.png)
 
-
-
-
-
+## Test the Perl calculator
+Fire up an XTerm to test the calculator. We can use the following command to test. In this example "perl -e" tells the Perl intepreter to execute the following input, as opposed to a file of input. Double quotes (") encapsulate the script sent to the intepreter, while the escaped double quotes (\") allow the newline character (\n) to show in the output. EXPR can be any math function.
+```
+perl -e "print EXPR . \"\n\";"
+```
+In this example the two integers involved are 4 and 3.
+```
+perl -e "print 4+3 . \"\n\";"
+perl -e "print 4-3 . \"\n\";"
+perl -e "print 4*3 . \"\n\";"
+perl -e "print 4/3 . \"\n\";"
+```
+Use the force, read the source. Happy hacking!.
 
 
